@@ -283,13 +283,13 @@ dat <- dat[order(dat$animalName),]
 
 
 # Rename the ecuador tags
-dat$name<- as.character(dat$name)
-i <- 1
-for(i in 1: nrow(ec_names))
-  {
-    dat$name[dat$name==ec_names$code[i]] <- ec_names$name[i]      
-  }
-dat$name<- as.factor(dat$name)
+#dat$name<- as.character(dat$name)
+#i <- 1
+#for(i in 1: nrow(ec_names))
+#  {
+#    dat$name[dat$name==ec_names$code[i]] <- ec_names$name[i]      
+#  }
+#dat$name<- as.factor(dat$name)
 
 
 
