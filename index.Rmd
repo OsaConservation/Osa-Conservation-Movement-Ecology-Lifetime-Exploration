@@ -117,13 +117,13 @@ tmp3 <- tmp3[tmp3$location_lat>8,]
 tmp4 <- getMovebankData(study=2957292408, login=loginStored,  removeDuplicatedTimestamps=TRUE)
 
 #Andean condor foundation
-#tmp5 <- getMovebankData(study=2885579493, login=loginStored,  #removeDuplicatedTimestamps=TRUE)
+tmp5 <- getMovebankData(study=2885579493, login=loginStored,  removeDuplicatedTimestamps=TRUE)
 
 #Peccary project
 tmp6 <- getMovebankData(study=5956356622, login=loginStored,  removeDuplicatedTimestamps=TRUE)
 
 
-#ec_names <- data.frame(code=row.names(tmp5@idData), name=(tmp5@idData$nick_name))
+ec_names <- data.frame(code=row.names(tmp5@idData), name=(tmp5@idData$nick_name))
 
 mov_dat <- moveStack(tmp1, 
                      tmp3, 
