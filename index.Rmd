@@ -73,7 +73,7 @@ tmp2 <- getMovebankAnimals(study=1954804459,login=loginStored)
 # Carnivores
 tmp3 <- getMovebankAnimals(study=2957292408,login=loginStored)
 # andean condor foundation
-tmp4 <- getMovebankAnimals(study=2885579493,login=loginStored)
+#tmp4 <- getMovebankAnimals(study=2885579493,login=loginStored)
 # Peccary
 tmp5 <- getMovebankAnimals(study=		5956356622,login=loginStored)
 tmp5 <- tmp5[tmp5$local_identifier!="TEST",]
@@ -81,10 +81,10 @@ tmp5 <- tmp5[tmp5$local_identifier!="TEST",]
 
 
 # Move nickname to locak_identifier
-tmp4$local_identifier <- tmp4$nick_name
-tmp4$animalName <- tmp4$nick_name
+#tmp4$local_identifier <- tmp4$nick_name
+#tmp4$animalName <- tmp4$nick_name
 
-animals <- rbind(animals, tmp,tmp2, tmp3, tmp4, tmp5)
+animals <- rbind(animals, tmp,tmp2, tmp3, tmp5)
 
 # They are duplicated as there are two types of data - subset to GPS
 # They vary by the field "sensor_type_id"
@@ -117,18 +117,18 @@ tmp3 <- tmp3[tmp3$location_lat>8,]
 tmp4 <- getMovebankData(study=2957292408, login=loginStored,  removeDuplicatedTimestamps=TRUE)
 
 #Andean condor foundation
-tmp5 <- getMovebankData(study=2885579493, login=loginStored,  removeDuplicatedTimestamps=TRUE)
+#tmp5 <- getMovebankData(study=2885579493, login=loginStored,  #removeDuplicatedTimestamps=TRUE)
 
 #Peccary project
 tmp6 <- getMovebankData(study=5956356622, login=loginStored,  removeDuplicatedTimestamps=TRUE)
 
 
-ec_names <- data.frame(code=row.names(tmp5@idData), name=(tmp5@idData$nick_name))
+#ec_names <- data.frame(code=row.names(tmp5@idData), name=(tmp5@idData$nick_name))
 
 mov_dat <- moveStack(tmp1, 
                      tmp3, 
                      tmp4, 
-                     tmp5,
+                     #tmp5,
                      tmp6)
 # Remove the random zeros
 summary(mov_dat$location_long)
