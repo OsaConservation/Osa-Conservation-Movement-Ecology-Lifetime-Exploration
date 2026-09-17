@@ -73,7 +73,7 @@ tmp2 <- getMovebankAnimals(study=1954804459,login=loginStored)
 # Carnivores
 tmp3 <- getMovebankAnimals(study=2957292408,login=loginStored)
 # andean condor foundation
-#tmp4 <- getMovebankAnimals(study=2885579493,login=loginStored)
+tmp4 <- getMovebankAnimals(study=2885579493,login=loginStored)
 # Peccary
 tmp5 <- getMovebankAnimals(study=		5956356622,login=loginStored)
 tmp5 <- tmp5[tmp5$local_identifier!="TEST",]
@@ -81,8 +81,8 @@ tmp5 <- tmp5[tmp5$local_identifier!="TEST",]
 
 
 # Move nickname to locak_identifier
-#tmp4$local_identifier <- tmp4$nick_name
-#tmp4$animalName <- tmp4$nick_name
+tmp4$local_identifier <- tmp4$nick_name
+tmp4$animalName <- tmp4$nick_name
 
 animals <- rbind(animals, tmp,tmp2, tmp3, tmp5)
 
@@ -283,13 +283,13 @@ dat <- dat[order(dat$animalName),]
 
 
 # Rename the ecuador tags
-#dat$name<- as.character(dat$name)
-#i <- 1
-#for(i in 1: nrow(ec_names))
-#  {
-#    dat$name[dat$name==ec_names$code[i]] <- ec_names$name[i]      
-#  }
-#dat$name<- as.factor(dat$name)
+dat$name<- as.character(dat$name)
+i <- 1
+for(i in 1: nrow(ec_names))
+  {
+    dat$name[dat$name==ec_names$code[i]] <- ec_names$name[i]      
+  }
+dat$name<- as.factor(dat$name)
 
 
 
