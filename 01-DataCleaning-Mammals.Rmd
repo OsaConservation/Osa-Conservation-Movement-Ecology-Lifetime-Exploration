@@ -7254,6 +7254,9 @@ Distance moved: `r round(as.numeric(sum(mt_distance(clean_mammal[[i]]), na.rm=T)
 mammal_stack <- mt_stack(clean_mammal)
 tmp_csv <- as.data.frame(mammal_stack)
 tmp_csv$geometry <- NULL
+
+if (!dir.exists("tmp")) dir.create("tmp", recursive = TRUE)
+
 write.csv(tmp_csv, "tmp/mammal_clean.csv", row.names=F)
 saveRDS(mammal_stack, "tmp/mammal_stack.RDS")
  
@@ -7264,7 +7267,6 @@ drive_update(media = 'tmp/mammal_stack.RDS',file=as_id("13jUPdZjhT3ua0CHUCvaQvan
 #Chris' googledrive
 #drive_update(media = 'tmp/mammal_clean.csv',file=as_id("1J5cE3CFitFbUUg1wA0GLYvONEcybSi56"))
 #drive_update(media = 'tmp/mammal_stack.RDS',file=as_id("15KbO5FCX_VUNJKN53XX0TehtLtJntX9d"))
-
 
 ```
 
