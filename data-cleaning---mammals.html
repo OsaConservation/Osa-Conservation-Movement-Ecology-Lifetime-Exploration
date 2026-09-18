@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Part 2 Data cleaning - Mammals | Osa Conservation: Lifetime exploration</title>
+  <meta name="description" content="Part 2 Data cleaning - Mammals | Osa Conservation: Lifetime exploration" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Part 2 Data cleaning - Mammals | Osa Conservation: Lifetime exploration" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Part 2 Data cleaning - Mammals | Osa Conservation: Lifetime exploration" />
+  
+  
+  
+
+<meta name="author" content="Chris Beirne" />
+
+
+<meta name="date" content="2026-09-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="tapirs.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.12.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.2.3/leaflet.js"></script>
+<script src="libs/leaflet-providers-3.0.0/leaflet-providers.js"></script>
+<script src="libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js"></script>
+<link href="libs/lfx-fullscreen-1.0.2/lfx-fullscreen-prod.css" rel="stylesheet" />
+<script src="libs/lfx-fullscreen-1.0.2/lfx-fullscreen-prod.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Osa Conservation: Movement data exploration</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Raw data</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="index.html"><a href="index.html#costa-rica"><i class="fa fa-check"></i><b>1.0.1</b> Costa Rica</a></li>
+<li class="chapter" data-level="1.0.2" data-path="index.html"><a href="index.html#peru"><i class="fa fa-check"></i><b>1.0.2</b> Peru</a></li>
+<li class="chapter" data-level="1.0.3" data-path="index.html"><a href="index.html#ecuador"><i class="fa fa-check"></i><b>1.0.3</b> Ecuador</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-cleaning---mammals.html"><a href="data-cleaning---mammals.html"><i class="fa fa-check"></i><b>2</b> Data cleaning - Mammals</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="tapirs.html"><a href="tapirs.html"><i class="fa fa-check"></i><b>2.1</b> Tapirs</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="tapirs.html"><a href="tapirs.html#juancito-cr"><i class="fa fa-check"></i><b>2.1.1</b> Juancito (CR)</a></li>
+<li class="chapter" data-level="2.1.2" data-path="tapirs.html"><a href="tapirs.html#tuva-cr"><i class="fa fa-check"></i><b>2.1.2</b> Tuva (CR)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="jaguars.html"><a href="jaguars.html"><i class="fa fa-check"></i><b>2.2</b> Jaguars</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="jaguars.html"><a href="jaguars.html#killa-pe"><i class="fa fa-check"></i><b>2.2.1</b> Killa (PE)</a></li>
+<li class="chapter" data-level="2.2.2" data-path="jaguars.html"><a href="jaguars.html#shipetiari-pe"><i class="fa fa-check"></i><b>2.2.2</b> Shipetiari (PE)</a></li>
+<li class="chapter" data-level="2.2.3" data-path="jaguars.html"><a href="jaguars.html#matsonsori-pe"><i class="fa fa-check"></i><b>2.2.3</b> Matsonsori (PE)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="jaguars.html"><a href="jaguars.html#amigo-pe"><i class="fa fa-check"></i><b>2.2.4</b> Amigo (PE)</a></li>
+<li class="chapter" data-level="2.2.5" data-path="jaguars.html"><a href="jaguars.html#chimuelo-pe"><i class="fa fa-check"></i><b>2.2.5</b> Chimuelo (PE)</a></li>
+<li class="chapter" data-level="2.2.6" data-path="jaguars.html"><a href="jaguars.html#ricolas-pe"><i class="fa fa-check"></i><b>2.2.6</b> Ricolas (PE)</a></li>
+<li class="chapter" data-level="2.2.7" data-path="jaguars.html"><a href="jaguars.html#baby-pe"><i class="fa fa-check"></i><b>2.2.7</b> Baby (PE)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="pumas.html"><a href="pumas.html"><i class="fa fa-check"></i><b>2.3</b> Pumas</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="pumas.html"><a href="pumas.html#tico-cr"><i class="fa fa-check"></i><b>2.3.1</b> Tico (CR)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="pumas.html"><a href="pumas.html#coyunda-cr"><i class="fa fa-check"></i><b>2.3.2</b> Coyunda (CR)</a></li>
+<li class="chapter" data-level="2.3.3" data-path="pumas.html"><a href="pumas.html#kirari-pe"><i class="fa fa-check"></i><b>2.3.3</b> Kirari (PE)</a></li>
+<li class="chapter" data-level="2.3.4" data-path="pumas.html"><a href="pumas.html#valentina-cr"><i class="fa fa-check"></i><b>2.3.4</b> Valentina (CR)</a></li>
+<li class="chapter" data-level="2.3.5" data-path="pumas.html"><a href="pumas.html#kosni-pe"><i class="fa fa-check"></i><b>2.3.5</b> Kosni (PE)</a></li>
+<li class="chapter" data-level="2.3.6" data-path="pumas.html"><a href="pumas.html#macho2-cr"><i class="fa fa-check"></i><b>2.3.6</b> Macho2 (CR)</a></li>
+<li class="chapter" data-level="2.3.7" data-path="pumas.html"><a href="pumas.html#maximo-pe"><i class="fa fa-check"></i><b>2.3.7</b> Maximo (PE)</a></li>
+<li class="chapter" data-level="2.3.8" data-path="pumas.html"><a href="pumas.html#suxo-pe"><i class="fa fa-check"></i><b>2.3.8</b> Suxo (PE)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="ocelots.html"><a href="ocelots.html"><i class="fa fa-check"></i><b>2.4</b> Ocelots</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="ocelots.html"><a href="ocelots.html#kur%C3%A1-cr"><i class="fa fa-check"></i><b>2.4.1</b> Kurá (CR)</a></li>
+<li class="chapter" data-level="2.4.2" data-path="ocelots.html"><a href="ocelots.html#jerry-cr"><i class="fa fa-check"></i><b>2.4.2</b> Jerry (CR)</a></li>
+<li class="chapter" data-level="2.4.3" data-path="ocelots.html"><a href="ocelots.html#echo-cr"><i class="fa fa-check"></i><b>2.4.3</b> Echo (CR)</a></li>
+<li class="chapter" data-level="2.4.4" data-path="ocelots.html"><a href="ocelots.html#emilia-cr"><i class="fa fa-check"></i><b>2.4.4</b> Emilia (CR)</a></li>
+<li class="chapter" data-level="2.4.5" data-path="ocelots.html"><a href="ocelots.html#orianna-cr"><i class="fa fa-check"></i><b>2.4.5</b> Orianna (CR)</a></li>
+<li class="chapter" data-level="2.4.6" data-path="ocelots.html"><a href="ocelots.html#maathai-cr"><i class="fa fa-check"></i><b>2.4.6</b> Maathai (CR)</a></li>
+<li class="chapter" data-level="2.4.7" data-path="ocelots.html"><a href="ocelots.html#kats%C3%ADmari-pe"><i class="fa fa-check"></i><b>2.4.7</b> Katsímari (PE)</a></li>
+<li class="chapter" data-level="2.4.8" data-path="ocelots.html"><a href="ocelots.html#pasooki-pe"><i class="fa fa-check"></i><b>2.4.8</b> Pasooki (PE)</a></li>
+<li class="chapter" data-level="2.4.9" data-path="ocelots.html"><a href="ocelots.html#tunche-pe"><i class="fa fa-check"></i><b>2.4.9</b> Tunche (PE)</a></li>
+<li class="chapter" data-level="2.4.10" data-path="ocelots.html"><a href="ocelots.html#cecina-pe"><i class="fa fa-check"></i><b>2.4.10</b> Cecina (PE)</a></li>
+<li class="chapter" data-level="2.4.11" data-path="ocelots.html"><a href="ocelots.html#ranga-pe"><i class="fa fa-check"></i><b>2.4.11</b> Ranga (PE)</a></li>
+<li class="chapter" data-level="2.4.12" data-path="ocelots.html"><a href="ocelots.html#cocona-pe"><i class="fa fa-check"></i><b>2.4.12</b> Cocona (PE)</a></li>
+<li class="chapter" data-level="2.4.13" data-path="ocelots.html"><a href="ocelots.html#namu-cr"><i class="fa fa-check"></i><b>2.4.13</b> Namu (CR)</a></li>
+<li class="chapter" data-level="2.4.14" data-path="ocelots.html"><a href="ocelots.html#chullachaqui-pe"><i class="fa fa-check"></i><b>2.4.14</b> Chullachaqui (PE)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="white-lipped-peccaries.html"><a href="white-lipped-peccaries.html"><i class="fa fa-check"></i><b>2.5</b> White-lipped Peccaries</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="white-lipped-peccaries.html"><a href="white-lipped-peccaries.html#sini-pe"><i class="fa fa-check"></i><b>2.5.1</b> Sini (PE)</a></li>
+<li class="chapter" data-level="2.5.2" data-path="white-lipped-peccaries.html"><a href="white-lipped-peccaries.html#maicito-pe"><i class="fa fa-check"></i><b>2.5.2</b> Maicito (PE)</a></li>
+<li class="chapter" data-level="2.5.3" data-path="white-lipped-peccaries.html"><a href="white-lipped-peccaries.html#shuya-pe"><i class="fa fa-check"></i><b>2.5.3</b> Shuya (PE)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="short-eared-dogs.html"><a href="short-eared-dogs.html"><i class="fa fa-check"></i><b>2.6</b> Short eared dogs</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="short-eared-dogs.html"><a href="short-eared-dogs.html#otinkami-pe"><i class="fa fa-check"></i><b>2.6.1</b> Otinkami (PE)</a></li>
+<li class="chapter" data-level="2.6.2" data-path="short-eared-dogs.html"><a href="short-eared-dogs.html#otsiti-pe"><i class="fa fa-check"></i><b>2.6.2</b> Otsiti (PE)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="mammal-summaries.html"><a href="mammal-summaries.html"><i class="fa fa-check"></i><b>3</b> Mammal Summaries</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="mammal-summaries.html"><a href="mammal-summaries.html#cats"><i class="fa fa-check"></i><b>3.0.1</b> Cats</a></li>
+<li class="chapter" data-level="3.0.2" data-path="mammal-summaries.html"><a href="mammal-summaries.html#wlp"><i class="fa fa-check"></i><b>3.0.2</b> WLP</a></li>
+<li class="chapter" data-level="3.0.3" data-path="mammal-summaries.html"><a href="mammal-summaries.html#se-dogs"><i class="fa fa-check"></i><b>3.0.3</b> SE Dogs</a></li>
+<li class="chapter" data-level="3.0.4" data-path="mammal-summaries.html"><a href="mammal-summaries.html#tapirs-1"><i class="fa fa-check"></i><b>3.0.4</b> Tapirs</a></li>
+<li class="chapter" data-level="3.0.5" data-path="mammal-summaries.html"><a href="mammal-summaries.html#juancito"><i class="fa fa-check"></i><b>3.0.5</b> Juancito</a></li>
+<li class="chapter" data-level="3.0.6" data-path="mammal-summaries.html"><a href="mammal-summaries.html#tuva"><i class="fa fa-check"></i><b>3.0.6</b> Tuva</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/ChrisBeirne/" target="blank">Osa Conservation: Movement data exploration</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Osa Conservation: Lifetime exploration</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-cleaning---mammals" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Part 2</span> Data cleaning - Mammals<a href="data-cleaning---mammals.html#data-cleaning---mammals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>All tracking devices come with errors, and each track must be checked visual and cleaned of outliers before analysis.</p>
+<p>This page shows this process for each mammal within the project. It has been automated so that we always have access to a stardardised and cleaned locations database.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tapirs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Osa Conservation: Movement data exploration.pdf", "Osa Conservation: Movement data exploration.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
