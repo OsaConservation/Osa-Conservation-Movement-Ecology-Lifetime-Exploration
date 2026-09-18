@@ -6,7 +6,7 @@ language:
   ui:
     chapter_name: "Part "
 delete_merged_file: true
-rmd_files: ["index.Rmd", "01-DataCleaning.Rmd","02-DataCleaning-Mammals.Rmd","03-Vulture-summaries.Rmd", "04-Mammal-Tracking.Rmd" ]
+rmd_files: ["index.Rmd", "01-DataCleaning-Mammals.Rmd","02-Mammal-Tracking.Rmd" ]
 output:
   bookdown::gitbook:
     theme: cosmo
