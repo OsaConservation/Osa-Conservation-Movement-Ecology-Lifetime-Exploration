@@ -7250,6 +7250,6 @@ Distance moved: `r round(as.numeric(sum(mt_distance(clean_mammal[[i]]), na.rm=T)
 
 ```{r}
 
-mammal_stack <- mt_stack(clean_mammals)
+mammal_stack <- mt_stack(clean_mammal)
 
 ```
