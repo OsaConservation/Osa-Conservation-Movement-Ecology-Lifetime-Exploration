@@ -103,7 +103,7 @@ t <- now("America/Costa_Rica")
 #start_mammal <- t-as.difftime(48,units='days')
 
 # Vultures
-tmp1 <- getMovebankData(study=1573471517, login=loginStored,  removeDuplicatedTimestamps=TRUE)
+#tmp1 <- getMovebankData(study=1573471517, login=loginStored,  removeDuplicatedTimestamps=TRUE)
 
 #OCelot - removed as collar no longer reporting
 #tmp2 <- getMovebankData(study=2526574641, login=loginStored,  removeDuplicatedTimestamps=TRUE)
@@ -125,13 +125,13 @@ tmp6 <- getMovebankData(study=5956356622, login=loginStored,  removeDuplicatedTi
 
 ec_names <- data.frame(code=row.names(tmp5@idData), name=(tmp5@idData$nick_name))
 
-mov_dat <- moveStack(tmp1, 
+mov_dat <- moveStack(#tmp1, 
                      tmp3, 
                      tmp4, 
-                     #tmp5,
+                     tmp5,
                      tmp6)
 # Remove the random zeros
-summary(mov_dat$location_long)
+#summary(mov_dat$location_long)
 mov_dat <- mov_dat[mov_dat$location_long<0,]
 
 
