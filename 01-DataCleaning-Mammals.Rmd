@@ -18,6 +18,10 @@ tmp <- tmp[duplicated(tmp)==F,]
 tmp$name <- as.character(tmp$name)
 tmp_mammal <- tmp[!(tmp$taxon_canonical_name %in% c("Cathartes aura", "Cathartes melambrotus", "Coragyps atratus", "Sarcoramphus papa")),]
 
+clean_mammal <- list()
+
+
+#############################################################
 # What animals do we need to do this for
 #tmp_mammal
  
