@@ -48,7 +48,7 @@ jobs:
             "foreach", "terra", "ggplot2",
             "remotes", "ctmm", "move2"
           ))'
-          Rscript -e "install.packages('raster', type='mac.binary')"
+          Rscript -e "install.packages('raster')"
 
       - name: Install atlastools
         run: Rscript -e "remotes::install_github('pratikunterwegs/atlastools')"
